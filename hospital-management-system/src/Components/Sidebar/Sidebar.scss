@@ -1,0 +1,59 @@
+.sidebar_link{
+    color: #fff;
+    display: block;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+
+
+.system_sidebar{
+    font-family: "Poppins" , sans-serif;
+    background-color: #000;
+    border-radius: 10px;
+    background-color: #7EC04C;
+    padding: 15px;
+    position: relative;
+    max-width: 300px;
+}
+
+.sidebar_close{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: red;
+    font-size: 20px;
+    display: none;
+}
+
+@keyframes systemside {
+    from {
+        left: -400px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes systemsideback {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -500px;
+    }
+}
+
+.system_sidebar.opened {
+    animation: systemside 0.5s ease-out;
+    display: block;
+}
+
+.system_sidebar.close {
+    animation: systemsideback 0.5s ease-out forwards;
+    display: block;
+}

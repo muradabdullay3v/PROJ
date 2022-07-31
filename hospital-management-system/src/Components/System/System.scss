@@ -1,0 +1,18 @@
+.systemicon{
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    display: none;
+}
+
+.system_content{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    margin-top: 150px;
+}
+
+::selection{
+    background-color: #fff;
+    color: #000;
+}

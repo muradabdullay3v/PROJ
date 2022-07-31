@@ -1,0 +1,22 @@
+footer{
+    font-family: "Poppins" , sans-serif ;
+    padding: 50px 0;
+    background-color: #f1f1f1;
+    h4{
+        font-size: 20px;
+    }
+    span{
+        color: #7EC04C;
+        cursor: pointer;
+        transition: color 0.5s;
+        &:hover{
+            color: #5f8b3d;
+        }
+    }
+}
+
+.footer_context{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}

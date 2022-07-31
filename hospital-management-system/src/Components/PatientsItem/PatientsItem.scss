@@ -1,0 +1,38 @@
+.patient_delete{
+    padding: 12px;
+    background-color: red;
+    color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+    border: none;
+    &:hover{
+        background-color: rgb(202, 33, 33);
+        cursor: pointer;
+    }
+}
+
+.patient_edit{
+    padding: 12px;
+    background-color: rgb(226, 204, 0);
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 10px;
+    transition: background-color 0.5s;
+    border: none;
+    &:hover{
+        background-color: rgb(223, 206, 58);
+        cursor: pointer;
+    }
+}
+
+.patient_info{
+    border-radius: 50%;
+    outline: none;
+    color: skyblue;
+    font-size: 40px;
+    transition: color 0.5s;
+    &:hover{
+        color:rgb(73, 175, 216);
+        cursor: pointer;
+    }
+}

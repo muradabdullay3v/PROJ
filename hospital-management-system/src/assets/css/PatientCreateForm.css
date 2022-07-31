@@ -1,0 +1,84 @@
+.create_patient_input {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  font-family: "Poppins" ,sans-serif;
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  margin: 15px auto 3px auto;
+  font-size: 17px;
+  -webkit-transition: outline 0.5s;
+  transition: outline 0.5s;
+}
+
+.create_patient_input:focus {
+  outline: 1px solid #7EC04C;
+}
+
+.patient_create_form {
+  padding: 15px;
+  -webkit-box-shadow: 1px 1px 20px 1px #b9b9b9;
+          box-shadow: 1px 1px 20px 1px #b9b9b9;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  font-family: "Poppins" ,sans-serif;
+  max-width: 400px;
+}
+
+.patient_create_form span {
+  color: red;
+  margin-left: 40px;
+}
+
+.create_patient_title {
+  color: #7EC04C;
+  text-align: center;
+  padding: 10px;
+}
+
+.create_patient_button {
+  background-color: #7EC04C;
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins" , sans-serif;
+  font-size: 17px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.create_patient_button:hover {
+  background-color: #64a334;
+  cursor: pointer;
+}
+
+.cancel_patient_button {
+  background-color: #bbb;
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins" , sans-serif;
+  font-size: 17px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.cancel_patient_button:hover {
+  background-color: #808080;
+  cursor: pointer;
+}
+
+.patient_create_button {
+  width: 260px;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=PatientCreateForm.css.map */

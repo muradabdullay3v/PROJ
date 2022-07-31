@@ -1,0 +1,45 @@
+.patient_delete {
+  padding: 12px;
+  background-color: red;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border: none;
+}
+
+.patient_delete:hover {
+  background-color: #ca2121;
+  cursor: pointer;
+}
+
+.patient_edit {
+  padding: 12px;
+  background-color: #e2cc00;
+  color: #fff;
+  border-radius: 10px;
+  margin-left: 10px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border: none;
+}
+
+.patient_edit:hover {
+  background-color: #dfce3a;
+  cursor: pointer;
+}
+
+.patient_info {
+  border-radius: 50%;
+  outline: none;
+  color: skyblue;
+  font-size: 40px;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.patient_info:hover {
+  color: #49afd8;
+  cursor: pointer;
+}
+/*# sourceMappingURL=PatientsItem.css.map */

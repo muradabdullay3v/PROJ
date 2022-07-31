@@ -1,0 +1,26 @@
+.systemicon {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  display: none;
+}
+
+.system_content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 30px;
+  margin-top: 150px;
+}
+
+::-moz-selection {
+  background-color: #fff;
+  color: #000;
+}
+
+::selection {
+  background-color: #fff;
+  color: #000;
+}
+/*# sourceMappingURL=System.css.map */
