@@ -1,9 +1,10 @@
 import "../../assets/css/PatientsTable.css";
 import "../../assets/css/PatientsItem.css";
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import {connect} from "react-redux";
-import  * as actions from "../../actions/Patient";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import axios from 'axios';
+import ReactPaginate from "react-paginate";
 
 
 function Filter() {
@@ -27,10 +28,41 @@ function Filter() {
 
 
 function PatientsTable(props) {
-    const [currentId,setCurrentId] = useState(0)
-      useEffect(()=>{
-        props.fetchAllPatients()
-    },[])
+
+    const [apiData , setApiData] = useState([]);
+    useEffect(() => {
+      axios.get('http://localhost:56709/api/Patients')
+      .then((getData) => {
+        setApiData(getData.data);
+      })
+    } , [])
+
+    const setFields = (id,name,surname,age,phone,bloodGroup,address,illness) => {
+      localStorage.setItem('ID', id);
+      localStorage.setItem('name', name);
+      localStorage.setItem('surname', surname);
+      localStorage.setItem('age', age);
+      localStorage.setItem('phone', phone);
+      localStorage.setItem('bloodGroup', bloodGroup);
+      localStorage.setItem('address', address);
+      localStorage.setItem('illness', illness);
+    }
+
+    const getData = () => {
+      axios.get('http://localhost:56709/api/Patients')
+      .then((getData) => {
+        setApiData(getData.data);
+      })
+    }
+
+    const onDelete = (id) =>{
+      axios.delete(`http://localhost:56709/api/Patients/${id}`)
+      .then(() => {
+          getData();
+      })
+    }
+
+    getData();
 
     return(
         <div>
@@ -54,23 +86,24 @@ function PatientsTable(props) {
                 </tr>
                 <tbody>
                     {
-                        props.PatientList.map((record,index)=>{
-                            return (
-                                <tr key={index}>
-                                    <td>{record.id}</td>
-                                    <td>{record.name}</td>
-                                    <td>{record.surname}</td>
-                                    <td>{record.age}</td>
-                                    <td>{record.phone}</td>
-                                    <td>{record.bloodGroup}</td>
-                                    <td>{record.address}</td>
-                                    <td>{record.illness}</td>
-                                    <td><a onClick={() => {setCurrentId(record.id)}}><i className="fa-solid fa-circle-info patient_info"></i></a></td>
-                                    <td><a><i className="fa-solid fa-trash patient_delete"></i></a>
-                                    <a><i className="fa-solid fa-pen patient_edit"></i></a></td>
+                      apiData.map((data) => {
+                        return (
+                          <tr>
+                                    <td>{data.id}</td>
+                                    <td>{data.name}</td>
+                                    <td>{data.surname}</td>
+                                    <td>{data.age}</td>
+                                    <td>{data.phone}</td>
+                                    <td>{data.bloodGroup}</td>
+                                    <td>{data.address}</td>
+                                    <td>{data.illness}</td>
+                                    <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
+                                    <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>
+                                    <Link to={`/system/PatientUpdateForm/`}><button className="patient_button" onClick={() => setFields(data.id,data.name,data.surname,data.age,
+                                      data.phone,data.bloodGroup,data.address,data.illness)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
                                     </tr>
-                            )
-                        })
+                        )
+                      })
                     }
                 </tbody>
     </table>
@@ -78,12 +111,5 @@ function PatientsTable(props) {
     );
 }
 
-const mapStateToProps = state => ({
-  PatientList : state.Patient.list
-})
 
-const mapActionToProps = {
-fetchAllPatients : actions.fetchAll
-}
-
-export default connect(mapStateToProps,mapActionToProps)(PatientsTable);
+export default PatientsTable;

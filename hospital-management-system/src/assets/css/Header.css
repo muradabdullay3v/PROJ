@@ -145,10 +145,6 @@
   text-decoration: none;
 }
 
-.nav-scrolled {
-  background-color: #000;
-}
-
 nav a {
   position: relative;
 }
@@ -182,5 +178,9 @@ nav a:hover::before {
   bottom: -2px;
   left: 0;
   background-color: #7EC04C;
+}
+
+.nav-scrolled {
+  background-color: #fff;
 }
 /*# sourceMappingURL=Header.css.map */

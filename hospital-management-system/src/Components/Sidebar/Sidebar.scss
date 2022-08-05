@@ -16,7 +16,6 @@
     background-color: #7EC04C;
     padding: 15px;
     position: relative;
-    max-width: 300px;
 }
 
 .sidebar_close{
@@ -25,12 +24,16 @@
     top: 10px;
     color: red;
     font-size: 20px;
+    border: none;
     display: none;
+    background-color: #7EC04C;
+    cursor: pointer;
 }
 
 @keyframes systemside {
     from {
         left: -400px;
+
     }
 
     to {
@@ -55,5 +58,6 @@
 
 .system_sidebar.close {
     animation: systemsideback 0.5s ease-out forwards;
-    display: block;
+    display: none;
 }
+

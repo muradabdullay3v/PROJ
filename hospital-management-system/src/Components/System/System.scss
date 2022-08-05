@@ -8,11 +8,32 @@
 .system_content{
     display: grid;
     grid-template-columns: auto auto;
-    gap: 30px;
+    justify-content: space-between;
     margin-top: 150px;
 }
 
 ::selection{
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
+}
+
+@media screen and (max-width:1200px) {
+    .system_content{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+        margin-top: 150px;
+        justify-content: center;
+    }
+}
+
+.danger_sign{
+    display: none;
+}
+
+@media screen and (max-width:1016px) {
+    .danger_sign{
+        display: block;
+        text-align: center;
+    }
 }

@@ -5,6 +5,7 @@ import PatientsTable from "../PatientsTable/PatientsTable";
 import PatientCreateForm from "../PatientCreateForm/PatientCreateForm";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
+import PatientUpdateForm from "../PatientUpdateForm/PatientUpdateForm";
 
 function SystemsidebarOpen() {
     var x = document.getElementById("system_sidebar");
@@ -16,16 +17,17 @@ function SystemsidebarOpen() {
   }
 
 function System() {
-  const [currentId,setCurrentId] = useState(0)
 
     return(
       <div>
             <div className="custom_container">
               <div className="system_content">
                 <Sidebar/>
+                <h2 className="danger_sign">Content is not available at this resolution</h2>
                   <Routes>
                     <Route path="/patientstable/*" element = {<PatientsTable />}/>
-                    <Route path="/patientcreateform/*" element = {<PatientCreateForm {...({currentId , setCurrentId})}/>}/>
+                    <Route path="/patientcreateform" element = {<PatientCreateForm />}/>
+                    <Route path="/patientupdateform/*" element = {<PatientUpdateForm />}/>
                   </Routes>
                 <a href="javascript:void(0);" class="systemicon" onClick={SystemsidebarOpen}>&#9776;</a>
               </div>

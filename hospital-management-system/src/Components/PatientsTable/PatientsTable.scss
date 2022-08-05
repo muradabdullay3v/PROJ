@@ -74,3 +74,20 @@
         cursor: pointer;
     }
   }
+
+  .patient_button{
+    border: none;
+    background-color: transparent;
+  }
+
+  @media screen and(max-width:1016px) {
+    #myTable,#myInput{
+      display: none;
+    }
+    .create_patient{
+      display: none;
+    }
+    .filter_patient{
+      display: none;
+    }
+  }
