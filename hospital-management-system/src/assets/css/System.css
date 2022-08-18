@@ -10,9 +10,7 @@
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 30px;
   margin-top: 150px;
 }
 

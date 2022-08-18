@@ -8,12 +8,12 @@ import { useEffect, useState } from "react";
 import PatientUpdateForm from "../PatientUpdateForm/PatientUpdateForm";
 
 function SystemsidebarOpen() {
-    var x = document.getElementById("system_sidebar");
-    if (x.className === "system_sidebar close") {
-      x.className = "system_sidebar opened";
-    } else {
-      x.className = "system_sidebar close";
-    }
+    // var x = document.getElementById("system_sidebar");
+    // if (x.className === "system_sidebar close") {
+    //   x.className = "system_sidebar opened";
+    // } else {
+    //   x.className = "system_sidebar close";
+    // }
   }
 
 function System() {

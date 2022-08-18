@@ -3,12 +3,12 @@ import "../../assets/css/Sidebar.css";
 
 
 function closeSystemSide() {
-    var x = document.getElementById("system_sidebar");
-    if (x.className === "system_sidebar opened") {
-      x.className = "system_sidebar close";
-    } else{
-      x.className = "system_sidebar opened";
-    }
+    // var x = document.getElementById("system_sidebar");
+    // if (x.className === "system_sidebar opened") {
+    //   x.className = "system_sidebar close";
+    // } else{
+    //   x.className = "system_sidebar opened";
+    // }
   }
 
 function Sidebar(){
