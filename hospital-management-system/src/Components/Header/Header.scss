@@ -157,3 +157,18 @@ nav a {
   .nav-scrolled{
     background-color: #fff;
 }
+
+.topnav_links-item.topnav_links-button{
+    border: none;
+    background-color: #7EC04C;
+    border-radius: 40px;
+    padding: 3px 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    transition: background-color 0.5s , color 0.5s;
+    &:hover{
+        background-color: #fff;
+        color: #7EC04C;
+    }
+}

@@ -9,6 +9,7 @@ import PatientCreateForm from "./Components/PatientCreateForm/PatientCreateForm"
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import axios from "axios";
+import PrivateRoutes from "./utils/PrivateRoutes";
 
 function App() {
 
@@ -18,7 +19,9 @@ function App() {
               <Header/>
               <Routes>
                 <Route path="/welcome/*" element = {<Welcome />}/>
-                <Route path="/system/*" element = {<System />}/>
+                <Route element = {<PrivateRoutes/>}>
+                  <Route path="/system/*" element = {<System />}/>
+                </Route>
                 <Route path="/login/*" element = {<Login />}/>
                 <Route path="/register/*" element = {<Register />}/>
               </Routes>

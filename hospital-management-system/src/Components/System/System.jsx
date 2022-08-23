@@ -6,6 +6,9 @@ import PatientCreateForm from "../PatientCreateForm/PatientCreateForm";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PatientUpdateForm from "../PatientUpdateForm/PatientUpdateForm";
+import EmployeesTable from "../../EmployeesTable/EmployeesTable";
+import EmployeesCreate from "../EmployeesCreate/EmployeesCreate";
+import EmployeesUpdate from "../EmployeesUpdate/EmployeesUpdate";
 
 function SystemsidebarOpen() {
     // var x = document.getElementById("system_sidebar");
@@ -26,6 +29,9 @@ function System() {
                 <h2 className="danger_sign">Content is not available at this resolution</h2>
                   <Routes>
                     <Route path="/patientstable/*" element = {<PatientsTable />}/>
+                    <Route path="/employeestable/*" element = {<EmployeesTable />}/>
+                    <Route path="/employeescreate/*" element = {<EmployeesCreate />}/>
+                    <Route path="/employeesupdate/*" element = {<EmployeesUpdate />}/>
                     <Route path="/patientcreateform" element = {<PatientCreateForm />}/>
                     <Route path="/patientupdateform/*" element = {<PatientUpdateForm />}/>
                   </Routes>

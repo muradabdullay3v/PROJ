@@ -1,0 +1,102 @@
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  font-family: "Poppins" , sans-serif;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 18px;
+  font-family: "Poppins" , sans-serif;
+  margin-bottom: 50px;
+}
+
+#myTable th, #myTable td {
+  text-align: center;
+  padding: 12px;
+}
+
+#myTable th {
+  color: #fff;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+  background-color: #7EC04C;
+}
+
+.create_patient {
+  background-color: #7EC04C;
+  padding: 16px 25px;
+  border: none;
+  text-decoration: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Poppins" , sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.create_patient:hover {
+  background-color: #64bd21;
+  cursor: pointer;
+}
+
+.patient_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter_patient {
+  background-color: #ccc;
+  padding: 16px 25px;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #000;
+  font-family: "Poppins" , sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.filter_patient:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.patient_button {
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1016px) {
+  #myTable, #myInput {
+    display: none;
+  }
+  .create_patient {
+    display: none;
+  }
+  .filter_patient {
+    display: none;
+  }
+}
+/*# sourceMappingURL=EmployeesTable.css.map */

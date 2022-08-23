@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../../assets/css/Header.css";
-import auth from "../../auth";
+import {useNavigate} from  "react-router"
 
 function sidebarOpen() {
   // var x = document.getElementById("sidebar");
@@ -33,8 +33,8 @@ function closeSide() {
 
 
 function Header (){
+  const navigate = useNavigate();
   const [username , setUsername] = useState('');
-  const [rootPath , setRootPath] = useState('/Login');
   useEffect(() => {
     setUsername(localStorage.getItem('username'));
 } , [])
@@ -49,21 +49,11 @@ function Header (){
                 <a href="#"><img src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png" alt="logo" className="logo"/></a>
               </div>
               <div className="topnav_links" id="topnav_links">
-                <NavLink to="/Welcome" className="topnav_links-item" onClick={() => {
-                    if(auth.isAuthenticated()){
-                      setRootPath("/System/PatientsTable");
-                    } 
-                    else{
-                      setRootPath("/Login");
-                    }                
-                }}>HOME</NavLink>
-                <NavLink to={rootPath} className="topnav_links-item">JOIN</NavLink>
-                <a href="#" className="topnav_links-item" onClick={() => {
-                  alert(auth.isAuthenticated());
-                  alert(rootPath.toString());
-                }}>{username}</a>
-                <button className="topnav_links-item" onClick={() => {
-                  auth.logout();
+                <NavLink to="/Welcome" className="topnav_links-item">HOME</NavLink>
+                <NavLink to="/system/patientstable" className="topnav_links-item">JOIN</NavLink>
+                <button className="topnav_links-item topnav_links-button" onClick={() => {
+                  localStorage.removeItem("auth");
+                  navigate("/Welcome");
                 }}>Logout</button>
                 <a href="javascript:void(0);" class="icon" onClick={sidebarOpen}>&#9776;</a>
               </div>

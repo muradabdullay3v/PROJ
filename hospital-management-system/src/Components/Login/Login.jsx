@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './../../assets/css/Login.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
-import auth from '../../auth';
+
 
 
 function Login(props) {
@@ -25,9 +25,8 @@ function Login(props) {
                 password
             }).then(result =>{
                 localStorage.setItem('username' , result.data.userName);
-                auth.login();
-                alert(auth.isAuthenticated());
                 navigate("/system/patientstable");
+                localStorage.setItem("auth" , true);
             }).catch(error => {
                 alert("Duzgun dogul")
             })

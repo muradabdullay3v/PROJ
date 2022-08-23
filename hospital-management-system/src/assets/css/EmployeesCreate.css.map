@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../Components/EmployeesCreate/EmployeesCreate.scss"
+    ],
+    "names": [],
+    "file": "EmployeesCreate.css"
+}
