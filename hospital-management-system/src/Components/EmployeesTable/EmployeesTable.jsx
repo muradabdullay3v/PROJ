@@ -1,4 +1,4 @@
-import "../assets/css/EmployeesTable.css";
+import "../../assets/css/EmployeesTable.css";
 import React,{useState,useEffect,useContext} from "react";
 import {connect} from "react-redux";
 import { Link, NavLink ,  Navigate} from "react-router-dom";

@@ -1,11 +1,29 @@
 .sidebar_link{
-    color: #fff;
-    display: block;
-    margin: 15px;
+    color: #7EC04C;
+    display: inline-block;
+    margin: 10px 15px;
     text-decoration: none;
     font-weight: 600;
     font-size: 21px;
+    transition: color 0.5s;
+    &:hover{
+        color: rgb(224, 224, 224);
+    }
 }
+
+.sidebar_link.active{
+    color: rgb(112, 112, 112);
+}
+
+.sidebar_link.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #7EC04C;
+  }
 
 
 
@@ -13,11 +31,10 @@
     font-family: "Poppins" , sans-serif;
     background-color: #000;
     border-radius: 10px;
-    background-color: #7EC04C;
-    padding: 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgb(218, 218, 218);
     position: relative;
-    max-width: 200px;
-    max-height: 400px;
+    max-height: 200px;
 }
 
 .sidebar_close{
@@ -53,13 +70,17 @@
     }
 }
 
-.system_sidebar.opened {
-    animation: systemside 0.5s ease-out;
-    display: block;
-}
+// .system_sidebar.opened {
+//     animation: systemside 0.5s ease-out;
+//     display: block;
+// }
 
-.system_sidebar.close {
-    animation: systemsideback 0.5s ease-out forwards;
-    display: none;
-}
+// .system_sidebar.close {
+//     animation: systemsideback 0.5s ease-out forwards;
+//     display: none;
+// }
 
+.sidebar_content{
+    margin: 0 auto;
+    max-width: 780px;
+}

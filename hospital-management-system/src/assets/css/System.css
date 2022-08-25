@@ -8,8 +8,8 @@
 .system_content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
   gap: 30px;
   margin-top: 150px;
 }

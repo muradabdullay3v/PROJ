@@ -21,6 +21,7 @@
   -webkit-box-shadow: 1px 1px 20px 1px #b9b9b9;
           box-shadow: 1px 1px 20px 1px #b9b9b9;
   border-radius: 10px;
+  margin: 0 auto;
   margin-bottom: 50px;
   font-family: "Poppins" ,sans-serif;
   max-width: 400px;
@@ -80,5 +81,9 @@
   display: -ms-flexbox;
   display: flex;
   margin: 20px auto;
+}
+
+.create_select {
+  padding: 0;
 }
 /*# sourceMappingURL=PatientCreateForm.css.map */

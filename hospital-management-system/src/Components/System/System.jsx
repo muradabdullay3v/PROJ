@@ -6,9 +6,11 @@ import PatientCreateForm from "../PatientCreateForm/PatientCreateForm";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PatientUpdateForm from "../PatientUpdateForm/PatientUpdateForm";
-import EmployeesTable from "../../EmployeesTable/EmployeesTable";
+import EmployeesTable from "../EmployeesTable/EmployeesTable";
 import EmployeesCreate from "../EmployeesCreate/EmployeesCreate";
 import EmployeesUpdate from "../EmployeesUpdate/EmployeesUpdate";
+import ReservationTable from "../ReservationTable/ReservationTable";
+import ReservationCreate from "../ReservationCreate/ReservationCreate";
 
 function SystemsidebarOpen() {
     // var x = document.getElementById("system_sidebar");
@@ -34,6 +36,8 @@ function System() {
                     <Route path="/employeesupdate/*" element = {<EmployeesUpdate />}/>
                     <Route path="/patientcreateform" element = {<PatientCreateForm />}/>
                     <Route path="/patientupdateform/*" element = {<PatientUpdateForm />}/>
+                    <Route path="/reservationtable/*" element = {<ReservationTable />}/>
+                    <Route path="/reservationcreate/*" element = {<ReservationCreate />}/>
                   </Routes>
                 <a href="javascript:void(0);" class="systemicon" onClick={SystemsidebarOpen}>&#9776;</a>
               </div>
