@@ -19,8 +19,8 @@ function Sidebar(){
                     <NavLink to="/System/PatientsTable" className="sidebar_link">Patientos</NavLink>
                     <NavLink to="/System/EmployeesTable" className="sidebar_link">Employees</NavLink>
                     <NavLink to="/System/ReservationTable" className="sidebar_link">Reservations</NavLink>
-                    <NavLink to="/Drugs" className="sidebar_link">Drugs</NavLink>
-                    <NavLink to="/Ward" className="sidebar_link">SquidWards</NavLink>
+                    <NavLink to="/System/DrugsTable" className="sidebar_link">Drugs</NavLink>
+                    <NavLink to="/System/WardsTable" className="sidebar_link">SquidWards</NavLink>
                 </div>
             </nav>
     );

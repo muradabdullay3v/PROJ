@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAA;EACd,YAAY,EAAE,IAAI;CACrB;;AACD,AAAA,kBAAkB,AAAA,KAAK,CAAA;EACnB,KAAK,EAAE,OAAO;CACjB;;AACD,AAAA,kBAAkB,AAAA,MAAM,CAAA;EACpB,KAAK,EAAE,GAAG;CACb;;AAED,AAAA,YAAY,CAAA;EACR,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "../../Components/WardsCreate/WardsCreate.scss"
+    ],
+    "names": [],
+    "file": "WardsCreate.css"
+}

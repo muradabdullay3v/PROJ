@@ -55,13 +55,11 @@ function ReservationTable(props) {
       })
     } , [])
 
-    const setFields = (id,patientname,doctorname,day,month,year,hour) => {
+    const setFields = (id,patientname,doctorname,date,hour) => {
       localStorage.setItem('ReservationID', id);
       localStorage.setItem('ReservationPatientName', patientname);
       localStorage.setItem('ReservationDoctorName', doctorname);
-      localStorage.setItem('ReservationDay', day);
-      localStorage.setItem('ReservationMonth', month);
-      localStorage.setItem('ReservationYear', year);
+      localStorage.setItem('ReservationDate', date);
       localStorage.setItem('ReservationHour', hour);
     }
 
@@ -118,7 +116,7 @@ function ReservationTable(props) {
                                     <td>{data.hour + ":00"}</td>
                                     <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
                                     <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>
-                                    <Link to={`/system/ReservationUpdate/`}><button className="patient_button" onClick={() => setFields(data.id,data.patientName,data.doctorName,data.date,data.time,data.hour)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
+                                    <Link to={`/system/ReservationUpdate/`}><button className="patient_button" onClick={() => setFields(data.id,data.patientName,data.doctorName,data.date,data.hour)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
                                     </tr>
                         )
                       })

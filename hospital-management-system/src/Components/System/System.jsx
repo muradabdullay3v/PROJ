@@ -11,6 +11,13 @@ import EmployeesCreate from "../EmployeesCreate/EmployeesCreate";
 import EmployeesUpdate from "../EmployeesUpdate/EmployeesUpdate";
 import ReservationTable from "../ReservationTable/ReservationTable";
 import ReservationCreate from "../ReservationCreate/ReservationCreate";
+import ReservationUpdate from "../ReservationUpdate/ReservationUpdate";
+import DrugsTable from "../DrugsTable/DrugsTable";
+import DrugsCreate from "../DrugsCreate/DrugsCreate";
+import DrugsUpdate from "../DrugsUpdate/DrugsUpdate";
+import WardsTable from "../WardsTable/WardsTable";
+import WardsCreate from "../WardsCreate/WardsCreate";
+import WardsUpdate from "../WardsUpdate/WardsUpdate";
 
 function SystemsidebarOpen() {
     // var x = document.getElementById("system_sidebar");
@@ -38,6 +45,13 @@ function System() {
                     <Route path="/patientupdateform/*" element = {<PatientUpdateForm />}/>
                     <Route path="/reservationtable/*" element = {<ReservationTable />}/>
                     <Route path="/reservationcreate/*" element = {<ReservationCreate />}/>
+                    <Route path="/reservationupdate/*" element = {<ReservationUpdate />}/>
+                    <Route path="/drugstable/*" element = {<DrugsTable />}/>
+                    <Route path="/drugscreate/*" element = {<DrugsCreate />}/>
+                    <Route path="/drugsupdate/*" element = {<DrugsUpdate />}/>
+                    <Route path="/wardstable/*" element = {<WardsTable />}/>
+                    <Route path="/wardscreate/*" element = {<WardsCreate />}/>
+                    <Route path="/wardsupdate/*" element = {<WardsUpdate />}/>
                   </Routes>
                 <a href="javascript:void(0);" class="systemicon" onClick={SystemsidebarOpen}>&#9776;</a>
               </div>
