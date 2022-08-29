@@ -47,4 +47,10 @@
 .login_button:hover {
   background-color: #61b123;
 }
+
+label {
+  color: red;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=Login.css.map */

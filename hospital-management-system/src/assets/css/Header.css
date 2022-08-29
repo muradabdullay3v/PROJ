@@ -200,4 +200,41 @@ nav a:hover::before {
   background-color: #fff;
   color: #7EC04C;
 }
+
+.topnav_links-item.active.topnav_links-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: transparent;
+}
+
+.sidebar_links-item.topnav_links-button {
+  border: none;
+  background-color: #7EC04C;
+  border-radius: 40px;
+  padding: 3px 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  -webkit-transition: background-color 0.5s , color 0.5s;
+  transition: background-color 0.5s , color 0.5s;
+}
+
+.sidebar_links-item.topnav_links-button:hover {
+  background-color: #fff;
+  color: #7EC04C;
+}
+
+.sidebar_links-item.topnav_links-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: transparent;
+}
 /*# sourceMappingURL=Header.css.map */

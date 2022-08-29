@@ -1,0 +1,127 @@
+.features_text_title {
+  text-align: center;
+  color: #7EC04C;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.features_text_describtion {
+  text-align: center;
+  font-size: 20px;
+  color: grey;
+  margin-bottom: 50px;
+}
+
+#features {
+  font-family: "Poppins" , sans-serif;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.features_cards-item {
+  width: 300px;
+  -webkit-box-shadow: 1px 1px 10px 1px #bebebe;
+          box-shadow: 1px 1px 10px 1px #bebebe;
+  border-radius: 15px;
+  height: 350px;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.features_cards-item:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 20px 2px #7EC04C;
+          box-shadow: 2px 2px 20px 2px #7EC04C;
+}
+
+.features_cards-item:hover .features_card_text h4 {
+  color: grey;
+}
+
+.features_cards-item:hover .features_card_text {
+  border-top: 3px solid grey;
+}
+
+.features_cards-item:hover .features_card_text p {
+  color: #7EC04C;
+}
+
+.features_cards-item:hover .features_icon i {
+  background-color: grey;
+}
+
+.features_cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 992px) {
+  .features_cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+}
+
+.features_card_text {
+  border-top: #7EC04C 3px solid;
+  border-radius: 20px;
+  -webkit-transition: border-top 0.5s;
+  transition: border-top 0.5s;
+}
+
+.features_card_text h4 {
+  color: #7EC04C;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 25px;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.features_card_text p {
+  text-align: center;
+  padding: 0 15px;
+  color: grey;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.features_icon {
+  margin: 20px auto;
+  width: 65px;
+}
+
+.features_icon i {
+  font-size: 50px;
+  background-color: #7EC04C;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.features_icon .fa-palette {
+  padding: 10px;
+}
+
+.features_icon .fa-brain {
+  padding: 10px;
+}
+
+.features_icon_space {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=Features.css.map */

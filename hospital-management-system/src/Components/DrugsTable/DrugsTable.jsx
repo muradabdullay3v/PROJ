@@ -37,13 +37,14 @@ function DrugsTable(props) {
       })
     } , [])
 
-    const setFields = (id,name,type,productionDate,expirationDate,price) => {
+    const setFields = (id,name,type,productionDate,expirationDate,price,count) => {
       localStorage.setItem('DrugID', id);
       localStorage.setItem('DrugName', name);
       localStorage.setItem('DrugType', type);
       localStorage.setItem('ProductionDate', productionDate);
       localStorage.setItem('ExpirationDate', expirationDate);
       localStorage.setItem('DrugPrice', price);
+      localStorage.setItem('DrugCount', count);
     }
 
     const getData = () => {
@@ -73,10 +74,11 @@ function DrugsTable(props) {
                 <tr class="header">
                     <th>#</th>
                     <th>Name</th>
-                    <th>Type</th>
-                    <th>Production Date</th>
-                    <th>Expiration Date</th>
-                    <th>Price</th>
+                    <th className="responsive_cell">Type</th>
+                    <th className="responsive_cell">Production Date</th>
+                    <th className="responsive_cell">Expiration Date</th>
+                    <th className="responsive_cell">Price</th>
+                    <th>Count</th>
                     <th>Info</th>
                     <th>Settings</th>
                 </tr>
@@ -87,14 +89,15 @@ function DrugsTable(props) {
                           <tr>
                                     <td>{data.id}</td>
                                     <td>{data.name}</td>
-                                    <td>{data.type}</td>
-                                    <td>{data.productionTime}</td>
-                                    <td>{data.expirationTime}</td>
-                                    <td>{data.price + "$"}</td>
+                                    <td className="responsive_cell">{data.type}</td>
+                                    <td className="responsive_cell">{data.productionTime}</td>
+                                    <td className="responsive_cell">{data.expirationTime}</td>
+                                    <td className="responsive_cell">{data.price + "$"}</td>
+                                    <td>{data.count}</td>
                                     <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
                                     <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>
                                     <Link to={`/system/DrugsUpdate/`}><button className="patient_button" onClick={() => setFields(data.id,data.name,data.type,data.productionDate,
-                                      data.expirationDate,data.price)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
+                                      data.expirationDate,data.price,data.count)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
                                     </tr>
                         )
                       })

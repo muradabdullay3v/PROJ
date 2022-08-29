@@ -99,8 +99,8 @@ function ReservationTable(props) {
                     <th>#</th>
                     <th>Patient Name</th>
                     <th>Doctor Name</th>
-                    <th>Date</th>
-                    <th>Hour</th>
+                    <th className="responsive_cell">Date</th>
+                    <th className="responsive_cell">Hour</th>
                     <th>Info</th>
                     <th>Settings</th>
                 </tr>
@@ -112,8 +112,8 @@ function ReservationTable(props) {
                                     <td>{data.id}</td>
                                     <td>{data.patientName}</td>
                                     <td>{data.doctorName}</td>
-                                    <td>{data.time}</td>
-                                    <td>{data.hour + ":00"}</td>
+                                    <td className="responsive_cell">{data.time}</td>
+                                    <td className="responsive_cell">{data.hour + ":00"}</td>
                                     <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
                                     <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>
                                     <Link to={`/system/ReservationUpdate/`}><button className="patient_button" onClick={() => setFields(data.id,data.patientName,data.doctorName,data.date,data.hour)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>

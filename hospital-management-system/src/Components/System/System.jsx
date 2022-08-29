@@ -18,6 +18,10 @@ import DrugsUpdate from "../DrugsUpdate/DrugsUpdate";
 import WardsTable from "../WardsTable/WardsTable";
 import WardsCreate from "../WardsCreate/WardsCreate";
 import WardsUpdate from "../WardsUpdate/WardsUpdate";
+import DoctorsTable from "../DoctorsTable/DoctorsTable";
+import DoctorsCreate from "../DoctorsCreate/DoctorsCreate";
+import DoctorsUpdate from "../DoctorsCreate/DoctorsUpdate/DoctorsUpdate";
+import Info from "../Info/Info";
 
 function SystemsidebarOpen() {
     // var x = document.getElementById("system_sidebar");
@@ -35,7 +39,6 @@ function System() {
             <div className="custom_container">
               <div className="system_content">
                 <Sidebar/>
-                <h2 className="danger_sign">Content is not available at this resolution</h2>
                   <Routes>
                     <Route path="/patientstable/*" element = {<PatientsTable />}/>
                     <Route path="/employeestable/*" element = {<EmployeesTable />}/>
@@ -52,6 +55,10 @@ function System() {
                     <Route path="/wardstable/*" element = {<WardsTable />}/>
                     <Route path="/wardscreate/*" element = {<WardsCreate />}/>
                     <Route path="/wardsupdate/*" element = {<WardsUpdate />}/>
+                    <Route path="/doctorstable/*" element = {<DoctorsTable />}/>
+                    <Route path="/doctorscreate/*" element = {<DoctorsCreate />}/>
+                    <Route path="/doctorsupdate/*" element = {<DoctorsUpdate />}/>
+                    <Route path="/info/*" element = {<Info />}/>
                   </Routes>
                 <a href="javascript:void(0);" class="systemicon" onClick={SystemsidebarOpen}>&#9776;</a>
               </div>

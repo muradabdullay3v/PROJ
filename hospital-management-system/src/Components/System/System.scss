@@ -26,14 +26,3 @@
         justify-content: center;
     }
 }
-
-.danger_sign{
-    display: none;
-}
-
-@media screen and (max-width:1016px) {
-    .danger_sign{
-        display: block;
-        text-align: center;
-    }
-}

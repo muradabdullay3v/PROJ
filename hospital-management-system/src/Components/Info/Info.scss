@@ -1,0 +1,28 @@
+.info_content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "p d"
+                         "r r";
+    gap: 30px;
+}
+
+@media screen and (max-width:992px) {
+    .info_content{
+        grid-template-columns: auto;
+        grid-template-areas: "p"
+                             "d"
+                             "r";
+    }
+}
+
+.patients_info{
+    grid-area: p;
+}
+
+.doctors_info{
+    grid-area: d;
+}
+
+.reservations_info{
+    grid-area: r;
+}

@@ -1,0 +1,102 @@
+.features_text_title{
+    text-align: center;
+    color: #7EC04C;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.features_text_describtion{
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 50px;
+}
+
+#features{
+    font-family: "Poppins" , sans-serif;
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.features_cards-item{
+    width: 300px;
+    box-shadow: 1px 1px 10px 1px rgb(190, 190, 190);
+    border-radius: 15px;
+    height: 350px;
+    transition:box-shadow 0.5s ;
+    &:hover{
+        cursor: pointer;
+        box-shadow :2px 2px 20px 2px #7EC04C;
+    }
+    &:hover .features_card_text h4{
+        color: grey;
+    }
+    &:hover .features_card_text {
+        border-top:3px solid grey;
+    }
+    &:hover .features_card_text p{
+        color: #7EC04C;
+    }
+    &:hover .features_icon i{
+        background-color: grey;
+    }
+}
+
+.features_cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:992px) {
+    .features_cards{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.features_card_text{
+    h4{
+        color: #7EC04C;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px 25px;
+        transition: color 0.5s;
+    }
+    p{
+        text-align: center;
+        padding: 0 15px;
+        color: grey;
+        transition: color 0.5s;
+    }
+    border-top: #7EC04C 3px solid;
+    border-radius: 20px;
+    transition: border-top 0.5s;
+}
+
+.features_icon{
+    i{
+        font-size: 50px;
+        background-color: #7EC04C;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 50%;
+        transition:  background-color 0.5s;
+    }
+
+    .fa-palette{
+        padding: 10px;
+    }
+
+    .fa-brain{
+        padding: 10px;
+    }
+    margin: 20px auto;
+    width: 65px;
+}
+
+.features_icon_space{
+    margin-bottom: 10px;
+}

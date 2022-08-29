@@ -34,7 +34,6 @@
     background-color: #fff;
     box-shadow: 1px 1px 10px 1px rgb(218, 218, 218);
     position: relative;
-    max-height: 200px;
 }
 
 .sidebar_close{
@@ -82,5 +81,26 @@
 
 .sidebar_content{
     margin: 0 auto;
-    max-width: 780px;
+    max-width: 940px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+@media screen and (max-width:898px) {
+    .sidebar_content{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width:494px) {
+    .sidebar_content{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width:332px) {
+    .sidebar_content{
+        display: grid;
+        grid-template-columns: auto;
+    }
 }

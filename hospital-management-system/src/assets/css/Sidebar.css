@@ -35,7 +35,6 @@
   -webkit-box-shadow: 1px 1px 10px 1px #dadada;
           box-shadow: 1px 1px 10px 1px #dadada;
   position: relative;
-  max-height: 200px;
 }
 
 .sidebar_close {
@@ -88,6 +87,37 @@
 
 .sidebar_content {
   margin: 0 auto;
-  max-width: 780px;
+  max-width: 940px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+@media screen and (max-width: 898px) {
+  .sidebar_content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .sidebar_content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 332px) {
+  .sidebar_content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
 }
 /*# sourceMappingURL=Sidebar.css.map */

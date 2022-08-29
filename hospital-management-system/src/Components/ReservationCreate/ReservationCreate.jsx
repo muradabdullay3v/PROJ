@@ -14,7 +14,10 @@ function ReservationCreate(props) {
     const [date, setDate] = useState();
     const [hour, setHour] = useState(0);
 
+    const[error, setError] = useState(false);
+
     const sendDataToAPI = () => {
+        if (patientName.trim() != "" && doctorName.trim() != ""  && hour > 0 ) {
         axios.post('http://localhost:56709/api/Reservations', {
             patientName,
             doctorName,
@@ -23,21 +26,31 @@ function ReservationCreate(props) {
         });
             navigate("/system/reservationtable");
     }
+    else{
+        setError(true);
+    }
+    }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
 
     return(
-        <form autoComplete="off" className="patient_create_form" noValidate>
+        <form autoComplete="off" className="patient_create_form" noValidate onSubmit={handleSubmit}>
             <h2 className="create_patient_title">Add Reservation</h2>
-            <input type="text" placeholder="Patient's Name" className="create_patient_input" onChange={(e) => setPatientName(e.target.value)}/>
+            <input type="text" placeholder="Patient's Name" className="create_patient_input" onChange={(e) => setPatientName(e.target.value)} value={patientName}/>
+            {error && patientName.length<=0 ? <label>Patient's Name can't be empty</label> :"" }
             
-            <input type="text" placeholder="Doctor's Name" className="create_patient_input" onChange={(e) => setDoctorName(e.target.value)}/>
+            <input type="text" placeholder="Doctor's Name" className="create_patient_input" onChange={(e) => setDoctorName(e.target.value)} value={doctorName}/>
+            {error && doctorName.length<=0 ? <label>Doctor's Name can't be empty</label> :"" }
 
             <input type="date" name="begin"
                 placeholder="dd-mm-yyyy"
                 min="2022-07-24" max="2023-12-31" className="create_patient_input" onChange={(e) => setDate((e.target.value))}/>
             
             
-            <input placeholder="Hour" className="create_patient_input" onChange={(e) => setHour(parseInt(e.target.value))}/>
+            <input type="number" placeholder="Hour" className="create_patient_input" onChange={(e) => setHour(parseInt(e.target.value))} value={hour}/>
+            {error && hour<=0 ? <label>Hour can't be 0 or less than 0</label> :"" }
             
             <div className="patient_create_button">
                 <button className="create_patient_button" type="submit" onClick={sendDataToAPI}>Create</button>

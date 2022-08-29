@@ -15,12 +15,13 @@ function Sidebar(){
     return(
             <nav className="system_sidebar opened" id="system_sidebar">
                 <div className="sidebar_content">
-                    <NavLink to="/Info" className="sidebar_link">Info</NavLink>
-                    <NavLink to="/System/PatientsTable" className="sidebar_link">Patientos</NavLink>
+                    <NavLink to="/System/Info" className="sidebar_link">Info</NavLink>
+                    <NavLink to="/System/PatientsTable" className="sidebar_link">Patients</NavLink>
+                    <NavLink to="/System/DoctorsTable" className="sidebar_link">Doctors</NavLink>
                     <NavLink to="/System/EmployeesTable" className="sidebar_link">Employees</NavLink>
                     <NavLink to="/System/ReservationTable" className="sidebar_link">Reservations</NavLink>
-                    <NavLink to="/System/DrugsTable" className="sidebar_link">Drugs</NavLink>
-                    <NavLink to="/System/WardsTable" className="sidebar_link">SquidWards</NavLink>
+                    <NavLink to="/System/DrugsTable" className="sidebar_link">Pharmacy</NavLink>
+                    <NavLink to="/System/WardsTable" className="sidebar_link">Wards</NavLink>
                 </div>
             </nav>
     );

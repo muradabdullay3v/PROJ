@@ -5,31 +5,31 @@ import "../../assets/css/Header.css";
 import {useNavigate} from  "react-router"
 
 function sidebarOpen() {
-  // var x = document.getElementById("sidebar");
-  // if (x.className === "sidebar close") {
-  //   x.className = "sidebar opened";
-  // } else {
-  //   x.className = "sidebar close";
-  // }
+  var x = document.querySelector("#sidebar");
+  if (x.className === "sidebar close") {
+    x.className = "sidebar opened";
+  } else {
+    x.className = "sidebar close";
+  }
 }
 
 function closeSide() {
-  // var x = document.getElementById("sidebar");
-  // if (x.className === "sidebar opened") {
-  //   x.className = "sidebar close";
-  // } else{
-  //   x.className = "sidebar opened";
-  // }
+  var x = document.querySelector("#sidebar");
+  if (x.className === "sidebar opened") {
+    x.className = "sidebar close";
+  } else{
+    x.className = "sidebar opened";
+  }
 }
 
-// const navbar = document.querySelector('.topnav_context');
-// window.onscroll = () => {
-//     if (window.scrollY > 100) {
-//         navbar.className += (' nav-scrolled');
-//     } else {
-//         navbar.className = ('topnav_context');
-//     }
-// };
+const navbar = document.querySelector('#topnav_context');
+window.onscroll = () => {
+    if (window.scrollY > 120) {
+        navbar.className += (' nav-scrolled');
+    } else {
+        navbar.className = ('topnav_context');
+    }
+};
 
 
 function Header (){
@@ -42,7 +42,7 @@ function Header (){
 
     return(
       <header>
-     <div className="topnav_context">
+     <div className="topnav_context" id="topnav_context">
         <div class="custom_container">
             <nav className="topnav">
               <div className="topnav_logo">
@@ -51,10 +51,11 @@ function Header (){
               <div className="topnav_links" id="topnav_links">
                 <NavLink to="/Welcome" className="topnav_links-item">HOME</NavLink>
                 <NavLink to="/system/patientstable" className="topnav_links-item">JOIN</NavLink>
-                <button className="topnav_links-item topnav_links-button" onClick={() => {
+                {localStorage.getItem("auth") ? <button className="topnav_links-item topnav_links-button" onClick={() => {
                   localStorage.removeItem("auth");
                   navigate("/Welcome");
-                }}>Logout</button>
+                }}>Logout</button> : <NavLink to="/login" className="topnav_links-item topnav_links-button">Login</NavLink>}
+                {!localStorage.getItem("auth") ? <NavLink to="/register" className="topnav_links-item topnav_links-button">Register</NavLink> : ""}
                 <a href="javascript:void(0);" class="icon" onClick={sidebarOpen}>&#9776;</a>
               </div>
             </nav>
@@ -65,6 +66,11 @@ function Header (){
                 </div>
                 <NavLink to="/Welcome" className="sidebar_links-item">HOME</NavLink>
               <NavLink to="/System/PatientsTable" className="sidebar_links-item">JOIN</NavLink>
+              {localStorage.getItem("auth") ? <button className="sidebar_links-item topnav_links-button" onClick={() => {
+                  localStorage.removeItem("auth");
+                  navigate("/Welcome");
+                }}>Logout</button> : <NavLink to="/login" className="sidebar_links-item topnav_links-button">Login</NavLink>}
+                {!localStorage.getItem("auth") ? <NavLink to="/register" className="sidebar_links-item topnav_links-button">Register</NavLink> : ""}
             </nav>
         </div>
   </header>

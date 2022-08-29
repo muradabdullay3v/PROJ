@@ -70,7 +70,7 @@ function WardsTable(props) {
                 <tr class="header">
                     <th>#</th>
                     <th>Number</th>
-                    <th>Type</th>
+                    <th className="responsive_cell">Type</th>
                     <th>Empty</th>
                     <th>Info</th>
                     <th>Settings</th>
@@ -82,7 +82,7 @@ function WardsTable(props) {
                           <tr>
                                     <td>{data.id}</td>
                                     <td>{data.number}</td>
-                                    <td>{data.type}</td>
+                                    <td className="responsive_cell">{data.type}</td>
                                     <td>{data.isEmpty.toString()}</td>
                                     <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
                                     <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>

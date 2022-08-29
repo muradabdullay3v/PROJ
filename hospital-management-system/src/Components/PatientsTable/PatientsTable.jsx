@@ -76,11 +76,11 @@ function PatientsTable(props) {
                     <th>#</th>
                     <th>Name</th>
                     <th>Surname</th>
-                    <th>Age</th>
-                    <th>Phone</th>
-                    <th>Blood Group</th>
-                    <th>Address</th>
-                    <th>Illness</th>
+                    <th className="responsive_cell">Age</th>
+                    <th className="responsive_cell">Phone</th>
+                    <th className="responsive_cell">Blood Group</th>
+                    <th className="responsive_cell">Address</th>
+                    <th className="responsive_cell">Illness</th>
                     <th>Info</th>
                     <th>Settings</th>
                 </tr>
@@ -92,11 +92,11 @@ function PatientsTable(props) {
                                     <td>{data.id}</td>
                                     <td>{data.name}</td>
                                     <td>{data.surname}</td>
-                                    <td>{data.age}</td>
-                                    <td>{data.phone}</td>
-                                    <td>{data.bloodGroup}</td>
-                                    <td>{data.address}</td>
-                                    <td>{data.illness}</td>
+                                    <td className="responsive_cell">{data.age}</td>
+                                    <td className="responsive_cell">{data.phone}</td>
+                                    <td className="responsive_cell">{data.bloodGroup}</td>
+                                    <td className="responsive_cell">{data.address}</td>
+                                    <td className="responsive_cell">{data.illness}</td>
                                     <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
                                     <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>
                                     <Link to={`/system/PatientUpdateForm/`}><button className="patient_button" onClick={() => setFields(data.id,data.name,data.surname,data.age,

@@ -36,7 +36,7 @@ function EmployeesTable(props) {
       })
     } , [])
 
-    const setFields = (id,name,surname,age,phone,address,position) => {
+    const setFields = (id,name,surname,age,phone,address,position,salary) => {
       localStorage.setItem('EmployeeID', id);
       localStorage.setItem('EmployeeName', name);
       localStorage.setItem('EmployeeSurname', surname);
@@ -44,6 +44,7 @@ function EmployeesTable(props) {
       localStorage.setItem('EmployeePhone', phone);
       localStorage.setItem('EmployeeAddress', address);
       localStorage.setItem('EmployeePosition', position);
+      localStorage.setItem('EmployeeSalary', salary);
     }
 
     const getData = () => {
@@ -74,10 +75,11 @@ function EmployeesTable(props) {
                     <th>#</th>
                     <th>Name</th>
                     <th>Surname</th>
-                    <th>Age</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                    <th>Position</th>
+                    <th className="responsive_cell">Age</th>
+                    <th className="responsive_cell">Phone</th>
+                    <th className="responsive_cell">Address</th>
+                    <th className="responsive_cell">Position</th>
+                    <th className="responsive_cell">Salary</th>
                     <th>Info</th>
                     <th>Settings</th>
                 </tr>
@@ -89,14 +91,15 @@ function EmployeesTable(props) {
                                     <td>{data.id}</td>
                                     <td>{data.name}</td>
                                     <td>{data.surname}</td>
-                                    <td>{data.age}</td>
-                                    <td>{data.phone}</td>
-                                    <td>{data.address}</td>
-                                    <td>{data.position}</td>
+                                    <td className="responsive_cell">{data.age}</td>
+                                    <td className="responsive_cell">{data.phone}</td>
+                                    <td className="responsive_cell">{data.address}</td>
+                                    <td className="responsive_cell">{data.position}</td>
+                                    <td className="responsive_cell">{data.salary + "$"}</td>
                                     <td><button className="patient_button"><i className="fa-solid fa-circle-info patient_info"></i></button></td>
                                     <td><button className="patient_button" onClick={() => onDelete(data.id)}><i className="fa-solid fa-trash patient_delete"></i></button>
                                     <Link to={`/system/EmployeesUpdate/`}><button className="patient_button" onClick={() => setFields(data.id,data.name,data.surname,data.age,
-                                      data.phone,data.address,data.position)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
+                                      data.phone,data.address,data.position,data.salary)}><i className="fa-solid fa-pen patient_edit"></i></button></Link></td>
                                     </tr>
                         )
                       })
